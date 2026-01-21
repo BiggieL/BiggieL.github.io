@@ -32,7 +32,17 @@
     }
 
     main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
       padding: 40px 20px;
+    }
+
+    
+    .content {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
     }
 
     h2 {
@@ -94,18 +104,31 @@
 <body>
   <header>
     <h1>My Project Portfolio</h1>
-    <p>Check out all the games I worked on and their source code! They may be rough around the edges but I urge you to try them out! </p>
+    <p>Check out all the projects I've worked on and their source code! The games may be rough around the edges but I urge you to try them out! My personal favorite is the precision platformer but the vr escape room is more polished. </p>
   </header>
   
   <main>
-    
+  <div class="content">
     <section id="games">
       <h1>My Games</h1>
       <p>Click a link below to play or view the source code</p>
       <ul>
         <li><a href="https://github.com/cstrick13/Escape-VR">Game 1 - Steampunk VR Escape Room</a></li>
+          <p class="desc">
+            You wake up on a flying ship, drifting through a maelstrom. The ground is slowly approaching as the ship sputters downwards towards your certain death. Navigate steampunk puzzles in VR and get this ship back into sailing condition, or die trying!
+          </p>
         <li><a href="https://github.com/LoganCoker/GameJam25">Game 2 - Gane Jam 2025 - 3D Platformer</a></li>
+            <p class="desc">
+                Made in 2 days for the 2025 Game Jam. Incredibly rough around the edges and riddled with bugs and missing textures but I am quite proud of the UI style and the movement is fun. I improved upon this movement in the 3D platformer in every way, but Gabriel still has its charm.
+            </p>
         <li><a href="https://github.com/Christian-Hal/LaTechGameDesignFinal">Game 3 - 3D Precision Platformer</a></li>
+            <p class="desc">
+              You are a poor sap who sold their soul to the corporate overlords in order to secure a better afterlife. Look where that got ya. You wake up in an arrary of office cubicles once more, and are greeted with a harsh reality. Your afterlife will be the same as your previous one: eat, sleep, work, repeat.
+              That is, until you exit the endless cubicles into an indescribable realm. Take hold of a grappling hook and begin your platforming journey to escape the monotony, accompanied by a zany three headed dog. Use the core mechanic, dimensional shift, to solve puzzles and complete difficult platforming sequences.
+              Each level has its own unique twist and flair, and I am quite proud with how it turned out. I was in charge of the main movement, camera, and physics, which were a nightmare to iron out. I was also in charge of bugfixing, gamefeel mechanics, sound effects, and my very own level. 
+              In my level, you must navigate through an abandoned fan shaft, filled with glitchy scenery and complex platforming. Use your dimensional shift to swap to a world where the fan is still working, and boost yourself up through this labrynth. In order to get out of the fan shaft,  you need to deactivate the top fan in the alternate dimension, which means
+              you have to do some diffiuclt platforming back down in the shaft in order to deactivate the breaker boxes. This helped push my creativty in level design and helped me create something both difficult and fun. 
+          </p>
       </ul>
     </section>
 
@@ -124,6 +147,21 @@
         </li>
     </section>
 
+    <section id="other-project">
+        <h2>Other Project</h2>
+        <p>Describe your other project here. Add links, descriptions, or features.</p>
+        <ul>
+          <li>
+            <a href="#">Other Project Link</a>
+            <p class="desc">Brief description of the other project, what it does, or why it's interesting.</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="photo">
+      <img src="your-photo.jpg" alt="My Photo">
+    </div>
 
   </main>
   
