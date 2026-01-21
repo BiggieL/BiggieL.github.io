@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Project Portfolio</title>
   <style>
+    h1, h2, p {
+      margin: 0;
+    }
     body {
       font-family: Arial, sans-serif;
       background: #121212;
@@ -125,6 +128,56 @@
       margin-bottom: 15px;
       border-radius: 4px;
     }
+
+section h2 {
+  margin-bottom: 6px;
+}
+
+section > p {
+  margin-bottom: 20px;
+}
+
+
+.game-card {
+  background: #181818;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #2a2a2a;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  border-color: #4AFFA8;
+}
+
+#games ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+ /* Clickable game cards */
+.game-card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.game-card a:hover {
+  text-decoration: none;
+}
+
+/* Screenshot styling */
+.game-screenshot {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 14px;
+  border: 1px solid #2a2a2a;
+}
+.game-card:hover .game-screenshot {
+  border-color: #4AFFA8;
+}    
     
   </style>
 </head>
@@ -137,27 +190,44 @@
   <main>
   <div class="content">
     <section id="games" class="section-box">
-      <h1>My Games</h1>
-      <p>Click a link below to play or view the source code</p>
-      <ul>
-        <li><a href="https://github.com/cstrick13/Escape-VR">Game 1 - Steampunk VR Escape Room</a></li>
-          <p class="desc">
-            You wake up on a flying ship, drifting through a maelstrom. The ground is slowly approaching as the ship sputters downwards towards your certain death. Navigate steampunk puzzles in VR and get this ship back into sailing condition, or die trying!
-          </p>
-        <li><a href="https://github.com/LoganCoker/GameJam25">Game 2 - Gane Jam 2025 - 3D Platformer</a></li>
-            <p class="desc">
-                Made in 2 days for the 2025 Game Jam. Incredibly rough around the edges and riddled with bugs and missing textures but I am quite proud of the UI style and the movement is fun. I improved upon this movement in the 3D platformer in every way, but Gabriel still has its charm.
-            </p>
-        <li><a href="https://github.com/Christian-Hal/LaTechGameDesignFinal">Game 3 - 3D Precision Platformer</a></li>
-            <p class="desc">
-              You are a poor sap who sold their soul to the corporate overlords in order to secure a better afterlife. Look where that got ya. You wake up in an arrary of office cubicles once more, and are greeted with a harsh reality. Your afterlife will be the same as your previous one: eat, sleep, work, repeat.
-              That is, until you exit the endless cubicles into an indescribable realm. Take hold of a grappling hook and begin your platforming journey to escape the monotony, accompanied by a zany three headed dog. Use the core mechanic, dimensional shift, to solve puzzles and complete difficult platforming sequences.
-              Each level has its own unique twist and flair, and I am quite proud with how it turned out. I was in charge of the main movement, camera, and physics, which were a nightmare to iron out. I was also in charge of bugfixing, gamefeel mechanics, sound effects, and my very own level. 
-              In my level, you must navigate through an abandoned fan shaft, filled with glitchy scenery and complex platforming. Use your dimensional shift to swap to a world where the fan is still working, and boost yourself up through this labrynth. In order to get out of the fan shaft,  you need to deactivate the top fan in the alternate dimension, which means
-              you have to do some diffiuclt platforming back down in the shaft in order to deactivate the breaker boxes. This helped push my creativty in level design and helped me create something both difficult and fun. 
-          </p>
-      </ul>
-    </section>
+  <h2>My Games</h2>
+  <p>Click a link below to play or view the source code</p>
+
+  <ul>
+    <li class="game-card">
+      <a href="https://github.com/cstrick13/Escape-VR">
+        Steampunk VR Escape Room
+      </a>
+      <p class="desc">
+        You wake up on a flying ship, drifting through a maelstrom as it slowly
+        falls from the sky. Solve immersive steampunk puzzles in VR to restore
+        the ship—or die trying.
+      </p>
+    </li>
+
+    <li class="game-card">
+      <a href="https://github.com/LoganCoker/GameJam25">
+        Game Jam 2025 – 3D Platformer
+      </a>
+      <p class="desc">
+        Built in just 48 hours for the 2025 Game Jam. Rough but charming, with
+        experimental movement and a UI style I’m still proud of.
+      </p>
+    </li>
+
+    <li class="game-card">
+      <a href="https://github.com/Christian-Hal/LaTechGameDesignFinal">
+        3D Precision Platformer
+      </a>
+      <p class="desc">
+        A narrative-driven precision platformer centered around movement,
+        grappling, and dimensional shifting. I developed the core movement,
+        camera, physics, gamefeel, sound effects, and one of the most challenging
+        levels in the game.
+      </p>
+    </li>
+  </ul>
+</section>
 
     <section id="cybersecurity" class="section-box">
       <h1> Cybersecurity Scripts</h1>
@@ -175,7 +245,7 @@
     </section>
 
     <section id="Apps" class="section-box">
-        <h2>Other Project</h2>
+        <h2>Apps</h2>
         <p>Describe your other project here. Add links, descriptions, or features.</p>
         <ul>
           <li>
@@ -186,7 +256,7 @@
       </section>
 
         <section id="Current Projects" class="section-box">
-        <h2>Other Project</h2>
+        <h2>Current Projects</h2>
         <p>Describe your other project here. Add links, descriptions, or features.</p>
         <ul>
           <li>
