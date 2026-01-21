@@ -67,6 +67,10 @@
       border-radius: 10px;
       transition: transform 0.2s, background 0.2s;
     }
+    
+    .section-box li {
+      margin-bottom: 20px;
+    }      
 
     li:hover {
       background: #242424;
@@ -98,6 +102,29 @@
       margin-top: 8px;
       line-height: 1.5;
     }
+    
+    .section-box {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 16px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 0 1px #2a2a2a;
+    }
+    
+    .section-box:hover {
+      box-shadow: 0 0 0 1px #4AFFA8;
+    }
+
+    .section-box::before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 60px;
+      background: #4AFFA8;
+      margin-bottom: 15px;
+      border-radius: 4px;
+    }
+    
   </style>
 </head>
 <body>
@@ -108,7 +135,7 @@
   
   <main>
   <div class="content">
-    <section id="games">
+    <section id="games" class="section-box">
       <h1>My Games</h1>
       <p>Click a link below to play or view the source code</p>
       <ul>
@@ -131,7 +158,7 @@
       </ul>
     </section>
 
-    <section id="cybersecurity">
+    <section id="cybersecurity" class="section-box">
       <h1> Cybersecurity Scripts</h1>
       <p>Tools and programs that I and my group memberes created for cybersecurity research and tests</p>
       <ul>
@@ -146,7 +173,7 @@
         </li>
     </section>
 
-    <section id="other-project">
+    <section id="Apps" class="section-box">
         <h2>Other Project</h2>
         <p>Describe your other project here. Add links, descriptions, or features.</p>
         <ul>
@@ -156,6 +183,18 @@
           </li>
         </ul>
       </section>
+
+        <section id="Current Projects" class="section-box">
+        <h2>Other Project</h2>
+        <p>Describe your other project here. Add links, descriptions, or features.</p>
+        <ul>
+          <li>
+            <a href="#">Other Project Link</a>
+            <p class="desc">Brief description of the other project, what it does, or why it's interesting.</p>
+          </li>
+        </ul>
+      </section>
+    
     </div>
 
     <div class="photo">
