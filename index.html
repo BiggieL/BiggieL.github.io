@@ -138,6 +138,27 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Carousel Buttons */
+    .carousel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: #A2FCD8;
+      border: none;
+      font-size: 2rem;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    
+    .carousel .prev { left: 10px; }
+    .carousel .next { right: 10px; }
+    
+    .carousel button:hover {
+      background: rgba(0,0,0,0.85);
+    }
     
 
 section h2 {
@@ -197,7 +218,9 @@ section > p {
 }    
     
   </style>
+  
 </head>
+  
 <body>
   <header>
     <h1>My Project Portfolio</h1>
@@ -340,5 +363,24 @@ section > p {
     © 2025 Keahi Temple
   </footer>
 
+    <script>
+      document.querySelectorAll(".carousel").forEach(carousel => {
+        const images = carousel.querySelectorAll("img");
+        let index = 0;
+    
+        carousel.querySelector(".next").onclick = () => {
+          images[index].classList.remove("active");
+          index = (index + 1) % images.length;
+          images[index].classList.add("active");
+        };
+    
+        carousel.querySelector(".prev").onclick = () => {
+          images[index].classList.remove("active");
+          index = (index - 1 + images.length) % images.length;
+          images[index].classList.add("active");
+        };
+      });
+    </script>
+  
 </body>
 </html>
